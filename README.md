@@ -22,8 +22,6 @@ g++ -o program Main.cpp Application.cpp Human.cpp IdGenerator.cpp InputManager.c
 - Save to file
 - Other stuff
 
-<img width="1000" height="580" alt="изображение" src="https://github.com/user-attachments/assets/424aa372-3c48-4a4a-8437-c3697cd83519" />
-
 ---
 
 # Human Database

@@ -18,7 +18,6 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 ## TODO
 
 - Find by name
-- Delete by ID
 - Save to file
 - Other stuff
 
@@ -44,6 +43,5 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 ## Планы
 
 - Поиск по имени
-- Удаление по ID
 - Сохранение в файл
 - Прочие штуки

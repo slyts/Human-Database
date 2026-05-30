@@ -11,7 +11,7 @@ Console-based application for managing human records with unique ID generation. 
 ## Build and Run
 
 ```bash
-g++ -o program Main.cpp Application.cpp Human.cpp IdGenerator.cpp InputManager.cpp DisplayManager.cpp
+g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.cpp Display.cpp
 ./program
 ```
 
@@ -37,7 +37,7 @@ g++ -o program Main.cpp Application.cpp Human.cpp IdGenerator.cpp InputManager.c
 ## Сборка и запуск
 
 ```bash
-g++ -o program Main.cpp Application.cpp Human.cpp IdGenerator.cpp InputManager.cpp DisplayManager.cpp
+g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.cpp Display.cpp
 ./program
 ```
 

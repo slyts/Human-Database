@@ -25,13 +25,11 @@ Person InputManager::EnterPerson()
 	std::string mobilePhone;
 	std::string birthDay;
 
-
 	while (name.empty())
 	{
 		std::cout << "Enter Name: ";
 		std::getline(std::cin, name);
 	}
-
 
 	while (surname.empty())
 	{
@@ -39,22 +37,14 @@ Person InputManager::EnterPerson()
 		std::getline(std::cin, surname);
 	}
 
-
 	std::cout << "Enter Patronymic: ";
 	std::getline(std::cin, patronymic);
-	if (patronymic.empty())
-		patronymic = "";
 
 	std::cout << "Enter MobilePhone: ";
 	std::getline(std::cin, mobilePhone);
-	if (mobilePhone.empty())
-		mobilePhone = "";
 
 	std::cout << "Enter BirthDay: ";
 	std::getline(std::cin, birthDay);
-	if (birthDay.empty())
-		birthDay = "";
-
 
 	Person person(name, surname, patronymic, mobilePhone, birthDay);
 	return person;

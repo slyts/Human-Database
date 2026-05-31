@@ -1,6 +1,4 @@
 #include "Application.h"
-#include "Display.h"
-#include "InputManager.h"
 
 void Application::ClearScreen()
 {
@@ -90,4 +88,3 @@ void Application::Run()
 		ClearScreen();
 	}
 }
-

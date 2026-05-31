@@ -2,12 +2,10 @@
 
 #include "IdGenerator.h"
 #include <string>
-#include <vector>
 
 class Person
 {
 private:
-
 	int id;
 
 	std::string name;

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "Person.h"
 #include <vector>
+#include "Person.h"
+#include "Display.h"
+#include "InputManager.h"
 
 class Application
 {

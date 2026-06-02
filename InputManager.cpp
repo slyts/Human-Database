@@ -2,12 +2,7 @@
 
 std::string InputManager::EnterName()
 {
-	std::string name;
-	while (name.empty())
-	{
-		std::cout << "Enter Name: ";
-		std::getline(std::cin, name);
-	}
+	std::string name = GetString("Enter Name: ", false, true);
 	return name;
 }
 
@@ -36,27 +31,40 @@ Person InputManager::EnterPerson()
 	std::string mobilePhone;
 	std::string birthDay;
 
-	while (name.empty())
-	{
-		std::cout << "Enter Name: ";
-		std::getline(std::cin, name);
-	}
-
-	while (surname.empty())
-	{
-		std::cout << "Enter Surname: ";
-		std::getline(std::cin, surname);
-	}
-
-	std::cout << "Enter Patronymic: ";
-	std::getline(std::cin, patronymic);
-
-	std::cout << "Enter MobilePhone: ";
-	std::getline(std::cin, mobilePhone);
-
-	std::cout << "Enter BirthDay: ";
-	std::getline(std::cin, birthDay);
+	name = GetString("Enter Name: ", false, true);
+	surname = GetString("Enter Surname: ", false, true);
+	patronymic = GetString("Enter Patronymic: ", true, true);
+	mobilePhone = GetString("Enter Mobile Phone: ", true, false);
+	birthDay = GetString("Enter BirthDay: ", true, false);
 
 	Person person(name, surname, patronymic, mobilePhone, birthDay);
 	return person;
+}
+
+std::string InputManager::GetString(const std::string & inputText, bool isCanEmpty, bool isFormat)
+{
+	std::string str;
+	if (isCanEmpty)
+	{
+		std::cout << inputText;
+		std::getline(std::cin, str);
+	}
+	else
+	{
+		while (str.empty())
+		{
+			std::cout << inputText;
+			std::getline(std::cin, str);
+		}
+	}
+
+	if (isFormat && !str.empty())
+	{
+		str[0] = std::toupper(str[0]);
+		for (size_t i = 1; i < str.size(); i++)
+		{
+			str[i] = std::tolower(str[i]);
+		}
+	}
+	return str;
 }

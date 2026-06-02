@@ -18,7 +18,7 @@ void Display::ShowTable(const std::vector<Person>& persons)
 	std::cout << "| ID  |     Name     |     Surname     |     Patronymic     |  BirthDay  |   MobilePhone   |\n";
 	std::cout << std::string(92, '-') << "\n";
 
-	for (int i = 0; i < persons.size(); i++)
+	for (size_t i = 0; i < persons.size(); i++)
 	{
 
 		std::cout << "| " << std::left << std::setw(4) << persons[i].GetId() << "| "

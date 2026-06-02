@@ -6,9 +6,11 @@
 
 class InputManager
 {
+private:
+	static std::string GetString(const std::string& inputText, bool isCanEmpty, bool isFormat);
 public:
 	static int EnterId();
 	static int GetChoice();
-	static std::string EnterName();
 	static Person EnterPerson();
+	static std::string EnterName();
 };

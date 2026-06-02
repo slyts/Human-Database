@@ -7,6 +7,7 @@ Console-based application for managing human records with unique ID generation. 
 - Add new human
 - Display all records in a formatted table
 - Automatic unique ID generation
+- Find by name
 
 ## Build and Run
 
@@ -17,7 +18,7 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 
 ## TODO
 
-- Find by name
+
 - Save to file
 - Other stuff
 
@@ -32,6 +33,7 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 - Добавление человека
 - Вывод всех записей в таблице
 - Автоматическая генерация ID
+- Поиск по имени
 
 ## Сборка и запуск
 
@@ -42,6 +44,5 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 
 ## Планы
 
-- Поиск по имени
 - Сохранение в файл
 - Прочие штуки

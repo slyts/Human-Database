@@ -12,11 +12,11 @@ private:
 	bool isRunning;
 
 	void ClearScreen();
-	void ShowMenu();
 	void HandleChoice(int choice);
 	void AddPerson();
 	void ShowPersonTable();
 	void DeleteById();
+	void FindByName();
 
 public:
 	Application();

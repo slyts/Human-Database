@@ -9,8 +9,6 @@ void Application::ClearScreen()
 #endif
 }
 
-void Application::ShowMenu() { Display::ShowMenu(); }
-
 void Application::HandleChoice(int choice)
 {
 	switch (choice)
@@ -27,7 +25,7 @@ void Application::HandleChoice(int choice)
 	}
 	case 3:
 	{
-		//Find by name
+		FindByName();
 		break;
 	}
 	case 4:
@@ -58,7 +56,7 @@ void Application::ShowPersonTable()
 
 void Application::DeleteById()
 {
-	int choiceId = InputManager::GetId();
+	int choiceId = InputManager::EnterId();
 	for (auto i = persons.begin(); i != persons.end(); i++)
 	{
 		if (i->GetId() == choiceId)
@@ -76,6 +74,29 @@ void Application::DeleteById()
 	std::cin.ignore();
 }
 
+void Application::FindByName()
+{
+	std::string name = InputManager::EnterName();
+	std::vector<Person> found;
+
+	for (size_t i = 0; i != persons.size(); i++)
+	{
+		if (name == persons[i].GetName())
+		{
+			found.push_back(persons[i]);
+		}
+	}
+
+	if (!found.empty())
+		Display::ShowTable(found);
+	else
+		std::cout << "Person with Name: " << name << " not found." << std::endl;
+
+	std::cout << "\nPress Enter to continue...";
+	std::cin.ignore();
+	ClearScreen();
+}
+
 Application::Application() : isRunning(true)
 {}
 
@@ -83,7 +104,7 @@ void Application::Run()
 {
 	while (isRunning)
 	{
-		ShowMenu();
+		Display::ShowMenu();
 		HandleChoice(InputManager::GetChoice());
 		ClearScreen();
 	}

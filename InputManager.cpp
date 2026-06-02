@@ -1,6 +1,17 @@
 #include "InputManager.h"
 
-int InputManager::GetId()
+std::string InputManager::EnterName()
+{
+	std::string name;
+	while (name.empty())
+	{
+		std::cout << "Enter Name: ";
+		std::getline(std::cin, name);
+	}
+	return name;
+}
+
+int InputManager::EnterId()
 {
 	int id;
 	std::cout << "Enter Id: ";

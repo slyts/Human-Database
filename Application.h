@@ -4,6 +4,8 @@
 #include "Person.h"
 #include "Display.h"
 #include "InputManager.h"
+#include "PersonSaver.h"
+#include "PersonReader.h"
 
 class Application
 {
@@ -17,6 +19,8 @@ private:
 	void ShowPersonTable();
 	void DeleteById();
 	void FindByName();
+	void Save() const;
+	void Read();
 
 public:
 	Application();

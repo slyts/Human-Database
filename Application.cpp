@@ -35,6 +35,7 @@ void Application::HandleChoice(int choice)
 	}
 	case 5:
 	{
+		Save();
 		isRunning = false;
 		break;
 	}
@@ -44,7 +45,11 @@ void Application::HandleChoice(int choice)
 	}
 }
 
-void Application::AddPerson() { persons.push_back(InputManager::EnterPerson()); }
+void Application::AddPerson() 
+{ 
+	persons.push_back(InputManager::EnterPerson());
+	Save();
+}
 
 void Application::ShowPersonTable()
 {
@@ -68,7 +73,7 @@ void Application::DeleteById()
 			return;
 		}
 	}
-
+	Save();
 	std::cout << "Person with ID: " << choiceId << " not found." << std::endl;
 	std::cout << "\nPress Enter to continue...";
 	std::cin.ignore();
@@ -98,7 +103,9 @@ void Application::FindByName()
 }
 
 Application::Application() : isRunning(true)
-{}
+{
+	Read();
+}
 
 void Application::Run()
 {
@@ -108,4 +115,16 @@ void Application::Run()
 		HandleChoice(InputManager::GetChoice());
 		ClearScreen();
 	}
+}
+
+void Application::Save() const
+{
+	PersonSaver saver("Persons.txt");
+	saver.Write(persons);
+}
+
+void Application::Read()
+{
+	PersonReader reader("Persons.txt");
+	persons = reader.Read();
 }

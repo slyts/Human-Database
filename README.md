@@ -12,16 +12,27 @@ Console-based application for managing human records with unique ID generation. 
 
 ## Build and Run
 
+### Using CMake (recommended)
 ```bash
-g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.cpp Display.cpp
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./HumanDatabase   # or ./HumanDatabase.exe on Windows
+```
+or
+```bash
+g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.cpp Display.cpp PersonReader.cpp PersonSaver.cpp
 ./program
 ```
 
 ## TODO
 
-- Other stuff
+- No active development planned. This project served its purpose for learning.
 
 ---
+
+> **Note:** This project was migrated to CMake for learning purposes. Both build systems are supported.
 
 # Human Database
 
@@ -37,11 +48,22 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 
 ## Сборка и запуск
 
+### Использовать CMake (рекомендуется)
 ```bash
-g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.cpp Display.cpp
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./HumanDatabase   # or ./HumanDatabase.exe on Windows
+```
+или
+```bash
+g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.cpp Display.cpp PersonReader.cpp PersonSaver.cpp
 ./program
 ```
 
 ## Планы
 
 - Прочие штуки
+
+> **Примечание.** Этот проект был перенесен на CMake в учебных целях. Поддерживаются обе системы сборки.

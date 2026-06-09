@@ -70,10 +70,11 @@ void Application::DeleteById()
 			std::cout << "Person with ID: " << choiceId << " deleted." << std::endl;
 			std::cout << "\nPress Enter to continue...";
 			std::cin.ignore();
+			Save();
 			return;
 		}
 	}
-	Save();
+	
 	std::cout << "Person with ID: " << choiceId << " not found." << std::endl;
 	std::cout << "\nPress Enter to continue...";
 	std::cin.ignore();

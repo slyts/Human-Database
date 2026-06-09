@@ -28,7 +28,7 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 
 ## TODO
 
-- No active development planned. This project served its purpose for learning.
+- No active development is planned. This project served its learning purpose. Although something may change.
 
 ---
 
@@ -64,6 +64,6 @@ g++ -o program Main.cpp Application.cpp Person.cpp IdGenerator.cpp InputManager.
 
 ## Планы
 
-- Прочие штуки
+- Активного развития не планируется. Этот проект послужил своей обучающей цели. Хотя что-то может измениться.
 
 > **Примечание.** Этот проект был перенесен на CMake в учебных целях. Поддерживаются обе системы сборки.

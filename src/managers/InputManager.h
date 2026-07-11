@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Person.h"
+#include "../person/Person.h"
 #include <iostream>
 #include <string>
 

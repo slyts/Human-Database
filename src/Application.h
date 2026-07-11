@@ -1,11 +1,11 @@
 #pragma once
 
 #include <vector>
-#include "Person.h"
-#include "Display.h"
-#include "InputManager.h"
-#include "PersonSaver.h"
-#include "PersonReader.h"
+#include "person/Person.h"
+#include "managers/Display.h"
+#include "managers/InputManager.h"
+#include "person/PersonSaver.h"
+#include "person/PersonReader.h"
 
 class Application
 {

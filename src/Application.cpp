@@ -84,11 +84,11 @@ void Application::FindByName() const
 	std::string name = InputManager::EnterName();
 	std::vector<Person> found;
 
-	for (size_t i = 0; i != persons.size(); i++)
+	for (const auto& person : persons)
 	{
-		if (name == persons[i].GetName())
+		if (name == person.GetName())
 		{
-			found.push_back(persons[i]);
+			found.push_back(person);
 		}
 	}
 

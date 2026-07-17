@@ -1,6 +1,6 @@
 #include "Application.h"
 
-void Application::ClearScreen()
+void Application::ClearScreen() const
 {
 #ifdef _WIN32
 	std::system("cls");
@@ -39,19 +39,18 @@ void Application::HandleChoice(int choice)
 		isRunning = false;
 		break;
 	}
-
 	default:
 		break;
 	}
 }
 
-void Application::AddPerson() 
+void Application::AddPerson()  
 { 
 	persons.push_back(InputManager::EnterPerson());
 	Save();
 }
 
-void Application::ShowPersonTable()
+void Application::ShowPersonTable() const
 {
 	Display::ShowTable(persons);
 	std::cout << "\nPress Enter to continue...";
@@ -80,7 +79,7 @@ void Application::DeleteById()
 	std::cin.ignore();
 }
 
-void Application::FindByName()
+void Application::FindByName() const
 {
 	std::string name = InputManager::EnterName();
 	std::vector<Person> found;

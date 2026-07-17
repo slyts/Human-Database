@@ -15,13 +15,14 @@ private:
 	std::vector<Person> persons;
 	bool isRunning;
 
-	void ClearScreen();
+	void ClearScreen() const;
+	void ShowPersonTable() const;
+	void FindByName() const;
+	void Save() const;
+
 	void HandleChoice(int choice);
 	void AddPerson();
-	void ShowPersonTable();
 	void DeleteById();
-	void FindByName();
-	void Save() const;
 	void Read();
 
 public:

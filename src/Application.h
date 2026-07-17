@@ -1,11 +1,13 @@
 #pragma once
 
 #include <vector>
+
 #include "person/Person.h"
 #include "managers/Display.h"
 #include "managers/InputManager.h"
 #include "person/PersonSaver.h"
 #include "person/PersonReader.h"
+#include "utils/MenuSwitcher.h"
 
 class Application
 {

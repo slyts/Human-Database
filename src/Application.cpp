@@ -13,27 +13,27 @@ void Application::HandleChoice(int choice)
 {
 	switch (choice)
 	{
-	case 1:
+	case MenuSwitcher::ADD_HUMAN:
 	{
 		AddPerson();
 		break;
 	}
-	case 2:
+	case MenuSwitcher::SHOW_TABLE:
 	{
 		ShowPersonTable();
 		break;
 	}
-	case 3:
+	case MenuSwitcher::FIND_NAME:
 	{
 		FindByName();
 		break;
 	}
-	case 4:
+	case MenuSwitcher::DELETE_BY_ID:
 	{
 		DeleteById();
 		break;
 	}
-	case 5:
+	case MenuSwitcher::EXIT:
 	{
 		Save();
 		isRunning = false;
